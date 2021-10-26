@@ -1,14 +1,24 @@
-# Project
+# Machine Learning at Scale Workshop
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+# Contents
 
-As the maintainer of this project, please make a few updates:
+## Train
+- PyTorch Distributed Training
+- LightGBM with Dask
+- FLAML AutoML with Ray
+- HyperBand with NNI
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+|scenario |description|
+|---------|-----------|
+|[pytorch-data-parallel]()||
+|[lightgbm-distributed-with-dask]()||
+|[flaml-automl-with-ray]()||
+|[hyperband-with-nni]()||
+
+## Inference
+coming soon
+
+
 
 ## Contributing
 
