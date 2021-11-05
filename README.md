@@ -1,6 +1,6 @@
 # Machine Learning at Scale Workshop
 
-This repo is a collection of codes for machine learning at scale on Azure Machine Learning. 
+This repo is a collection of codes/notebooks for machine learning at scale on Azure Machine Learning. 
 
 # Contents
 
@@ -8,13 +8,15 @@ This repo is a collection of codes for machine learning at scale on Azure Machin
 
 |scenario |description|
 |---------|-----------|
-|[pytorch-data-parallel]()||
-|[lightgbm-distributed-with-dask]()||
-|[flaml-automl-with-ray]()||
-|[hyperband-with-nni]()||
+|[pytorch-dpp]('./examples/train/pytorch-dpp')| PyTorch Distributed Data Parallel (DDP) |
+|[dask-lightgbm]('./examples/train/dask-lightgbm')| LightGBM Distributed Training with DASK |
+|[ray-flaml](./examples/train/ray-flaml')|FLAML AutoML with RAY|
+|[nni-hyperband]('./examples/train/nni-hyperband')| HyperParameter Tuning HyperBand with NNI |
 
 ## Inference
-coming soon
+
+Your contribution is welcome !
+
 
 
 
