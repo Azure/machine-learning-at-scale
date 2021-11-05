@@ -1,0 +1,22 @@
+searchSpaceFile: search_space.json
+trialCommand: python3 mnist.py
+trialCodeDirectory: src           # The path of trial code. By default it's ".", which means the same directory of this config file.
+trialGpuNumber: 0
+trialConcurrency: 10
+maxExperimentDuration: 10h
+maxTrialNumber: 1000
+advisor:
+  name: Hyperband
+  classArgs:
+    R: 100                    # the maximum trial budget (could be the number of mini-batches or epochs) can be
+                              # allocated to a trial. Each trial should use trial budget to control how long it runs.
+    eta: 3                    # proportion of discarded trials
+    optimize_mode: maximize   # maximize or minimize
+    exec_mode: parallelism    # serial or parallelism
+TrainingService:
+  platform: aml
+  dockerImage: msranni/nni
+  subscriptionId: 82a5d8d3-5322-4c49-b9d6-da6e00be5d57
+  resourceGroup: azureml-automl
+  workspaceName: azureml-automl
+  computeTarget: cpuclusters

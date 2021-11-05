@@ -1,0 +1,28 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+
+code: 
+  local_path: src
+
+# This is the command that will start up the ray cluster and run the script `train-automl-flaml.py` with the following parameters.
+command: >-
+  python startRay.py
+  --script train-automl-flaml.py
+  
+environment: 
+  conda_file: file:conda.yml
+  docker: 
+    image: mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04
+
+compute:
+  target: azureml:cpuclusters
+  instance_count: 3
+
+distribution:
+  # The job below is currently launched with `type: pytorch` since that 
+  # gives the full flexibility of assigning the work to the
+  # no pytorch is actually used in this job
+  type: pytorch
+
+experiment_name: train-automl-flaml
+
+description: FLAML AutoML on Ray Cluster using Azure Machine Learning Compute Cluster
