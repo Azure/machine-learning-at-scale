@@ -29,6 +29,8 @@ This repo is a collection of codes/notebooks for machine learning at scale on Az
 Your contribution is welcome !
 
 
+## Events
+[2021-11-18] [DB TECH SHOWCASE 2021 (Japan)](https://www.db-tech-showcase.com/2021/schedule/) - D14 Microsoft : Azure Machine Learning で始める大規模機械学習 @ 女部田啓太
 
 
 ## Contributing
