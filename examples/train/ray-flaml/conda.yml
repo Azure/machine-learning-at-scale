@@ -1,0 +1,13 @@
+name: ray
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip:
+      - flaml[notebook, blendsearch, ray, azureml]==0.6.9
+      - azureml-tensorboard
+      - ipykernel
+      - matplotlib
+      - tensorboardX<=2.2
+      - mpi4py

@@ -1,0 +1,19 @@
+name: dask
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip:
+      - lightgbm
+      - dask
+      - dask-ml
+      - bokeh
+      - pandas
+      - notebook
+      - matplotlib
+      - ipykernel
+      - numpy
+      - scikit-learn
+      - azureml-sdk
+      - azureml-mlflow
