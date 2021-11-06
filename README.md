@@ -1,19 +1,30 @@
-# Machine Learning at Scale Workshop
+# Machine Learning at Scale on Machine Learning
 
 This repo is a collection of codes/notebooks for machine learning at scale on Azure Machine Learning. 
 
-# Contents
 
-## Train
+## Getting Started
 
-|scenario |description|
+### setup base environment*
+
+1. setup Azure Machine Learning Workspace in your Azure subscription.
+2. download and install Visual Studio Code in your client PC. And install Azure Machine Learning Extension.
+3. create new Azure ML Compute Instance and launch Visual Studio Code
+
+*These steps are not mandatory. There are other ways to setup environment. But this repo is assumed to follow the above steps.
+
+## Contents
+
+### Train
+
+|Folder/Files |Description|
 |---------|-----------|
-|[pytorch-dpp]('./examples/train/pytorch-dpp')| PyTorch Distributed Data Parallel (DDP) |
-|[dask-lightgbm]('./examples/train/dask-lightgbm')| LightGBM Distributed Training with DASK |
-|[ray-flaml](./examples/train/ray-flaml')|FLAML AutoML with RAY|
-|[nni-hyperband]('./examples/train/nni-hyperband')| HyperParameter Tuning HyperBand with NNI |
+|[pytorch-dpp](examples/train/pytorch-ddp)| PyTorch Distributed Data Parallel (DDP) |
+|[dask-lightgbm](examples/train/dask-lightgbm)| LightGBM Distributed Training with DASK |
+|[ray-flaml](examples/train/ray-flaml)|FLAML AutoML with RAY|
+|[nni-hyperband](examples/train/nni-hyperband)| HyperParameter Tuning HyperBand with NNI |
 
-## Inference
+### Inference
 
 Your contribution is welcome !
 
