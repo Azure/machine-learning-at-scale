@@ -1,4 +1,4 @@
-# Machine Learning at Scale on Machine Learning
+# Machine Learning at Scale on Azure Machine Learning
 
 This repo is a collection of codes/notebooks for machine learning at scale on Azure Machine Learning. 
 
