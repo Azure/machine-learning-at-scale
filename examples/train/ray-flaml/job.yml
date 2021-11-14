@@ -9,12 +9,11 @@ command: >-
   --script train-automl-flaml.py
   
 environment: 
-  conda_file: file:conda.yml
-  docker: 
-    image: mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04
+  conda_file: conda.yml
+  image: mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04
 
-compute:
-  target: azureml:cpuclusters
+compute: azureml:cpuclusters
+resources:
   instance_count: 3
 
 distribution:

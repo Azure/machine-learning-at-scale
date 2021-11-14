@@ -19,4 +19,4 @@ TrainingService:
   subscriptionId: 82a5d8d3-5322-4c49-b9d6-da6e00be5d57
   resourceGroup: azureml-automl
   workspaceName: azureml-automl
-  computeTarget: cpuclusters
+  computeTarget: gpuclusters
