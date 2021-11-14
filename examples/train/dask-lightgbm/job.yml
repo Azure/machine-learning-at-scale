@@ -17,14 +17,14 @@ inputs:
     mode: mount
 
 environment: 
-  conda_file: file:conda.yml
-  docker: 
-    image: mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04
+  conda_file: conda.yml
+  image: mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04
 
-compute:
-  # use a sku with lots of disk space and memory
-  target: azureml:daskclusters
+# use a sku with lots of disk space and memory
+compute: azureml:daskclusters
+resources:
   instance_count: 5
+
 
 distribution:
   # The job below is currently launched with `type: pytorch` since that 
