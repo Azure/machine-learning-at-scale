@@ -1,3 +1,7 @@
+# original source code is from "Azure Machine Learning examples" repo.
+# url : https://github.com/Azure/azureml-examples/tree/main/cli/jobs/single-step/dask/nyctaxi
+
+
 import os
 import argparse
 import time
