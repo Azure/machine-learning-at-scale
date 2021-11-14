@@ -18,18 +18,18 @@ Neural Network Intelligence (NNI) is a library that provides a unified interface
 
 1. create conda environment
 
-```bash
-conda create -n nni python=3.6
-conda init bash
-source ~/.bashrc
-conda activate nni
-```
+  ```bash
+  conda create -n nni python=3.6
+  conda init bash
+  source ~/.bashrc
+  conda activate nni
+  ```
 
 2. Install NNI library in your Compute Instance.
 
-```bash
-pip install nni==2.5 azureml-sdk==1.35.0
-```
+  ```bash
+  pip install nni==2.5 azureml-sdk==1.35.0
+  ```
 3. Create Compute Clusters in your Azure Machine Learning Workspace
 
 <!-- TODO: Azure CLI and YML to create Compute Clusters -->
@@ -42,43 +42,43 @@ pip install nni==2.5 azureml-sdk==1.35.0
 
 - job configuration file : config_hyperband.yml
 
-configure TrainingService to Azure Machine Learning.
+  configure TrainingService to Azure Machine Learning.
 
-```yml
-TrainingService:
-  platform: aml
-  dockerImage: msranni/nni  # modify this if you bring your own docker image
-  subscriptionId: <your subscription ID>
-  resourceGroup: <azure machine learning workspace resource group>
-  workspaceName: <azure machine learning workspace name>
-  computeTarget: <compute cluster name>
-```
+  ```yml
+  TrainingService:
+    platform: aml
+    dockerImage: msranni/nni  # modify this if you bring your own docker image
+    subscriptionId: <your subscription ID>
+    resourceGroup: <azure machine learning workspace resource group>
+    workspaceName: <azure machine learning workspace name>
+    computeTarget: <compute cluster name>
+  ```
 
 - search space configuration file : search_space.json
 
-define your search space of hyperparameters in json file.
+  define your search space of hyperparameters in json file.
 
-```json
-{
-    "dropout_rate":{"_type":"uniform","_value":[0.5,0.9]},
-    "conv_size":{"_type":"choice","_value":[2,3,5,7]},
-    "hidden_size":{"_type":"choice","_value":[124, 512, 1024]},
-    "batch_size": {"_type":"choice","_value":[8, 16, 32, 64]},
-    "learning_rate":{"_type":"choice","_value":[0.0001, 0.001, 0.01, 0.1]}
-}
-```
+  ```json
+  {
+      "dropout_rate":{"_type":"uniform","_value":[0.5,0.9]},
+      "conv_size":{"_type":"choice","_value":[2,3,5,7]},
+      "hidden_size":{"_type":"choice","_value":[124, 512, 1024]},
+      "batch_size": {"_type":"choice","_value":[8, 16, 32, 64]},
+      "learning_rate":{"_type":"choice","_value":[0.0001, 0.001, 0.01, 0.1]}
+  }
+  ```
 
 5. Start trial job.
 
-```bash
-nnictl create --config config_hyperband.yml --port 8088
-```
+  ```bash
+  nnictl create --config config_hyperband.yml --port 8088
+  ```
 
 6. Access to dashboard.
 
-NNI Dashboard is running on Compute Instance. You can access to it from your client PC from URL like `https://<your compute instance name>-8088.<region>instances.azureml.ms`
+  NNI Dashboard is running on Compute Instance. You can access to it from your client PC from URL like `https://<your compute instance name>-8088.<region>instances.azureml.ms`
 
-For examples, if your Compute Instance name is "client" and region is "japaneast", you can access using `https://client-8088.japaneast.instances.azureml.ms`.
+  For examples, if your Compute Instance name is "client" and region is "japaneast", you can access using `https://client-8088.japaneast.instances.azureml.ms`.
 
 ## Reference
 
