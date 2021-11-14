@@ -18,9 +18,10 @@ LightGBM supports distributed training with DASK. DASK is a distributed computin
 2. check train script in `src` directory.
     - DASK clusters startup script : [startDask.py]('src/startDask.py')
     - lightgbm training script : [train-lgb-dask.py]('src/train-lgb-dask.py')
-3. Open [job.yml](yob.yml) and start job.
+3. Open [job.yml](yob.yml) and start job from VSCode Azure ML Extension or terminal.
 
     ```bash
+    cd examples/train/dask-lightgbm/
     az ml job create --file job.yml --stream
     ```
 
