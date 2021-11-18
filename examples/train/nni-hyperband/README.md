@@ -75,7 +75,7 @@ Neural Network Intelligence (NNI) is a library that provides a unified interface
   ```
 
 6. Access to dashboard.
-  - NNI Dashboard is running on Compute Instance. You can access to it from your client PC from URL like `https://<your compute instance name>-8088.<region>instances.azureml.ms`. For examples, if your Compute Instance name is "client" and region is "japaneast", you can access using `https://client-8088.japaneast.instances.azureml.ms`.
+  - NNI Dashboard is running on Compute Instance. You can access to it from your client PC from URL like `https://<your compute instance name>-8088.<region>instances.azureml.ms` and check the result as blew. For examples, if your Compute Instance name is "client" and region is "japaneast", you can access using `https://client-8088.japaneast.instances.azureml.ms`. <img src="../../../docs/images/nni-1.png"><img src="../../../docs/images/nni-2.png"><img src="../../../docs/images/nni-3.png"><img src="../../../docs/images/nni-4.png"><img src="../../../docs/images/nni-5.png">
 
 
 
